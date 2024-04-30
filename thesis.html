@@ -1,0 +1,172 @@
+<html>
+<head>
+<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<meta name="keywords" content="ge wang, designer, research, teacher, computer music, chuck, princeton" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--
+<link href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />-->
+<title>
+The ChucK Audio Programming Language | PhD Thesis
+</title>
+<body bgcolor=#ffffff text=#000000>
+<font face="helvtica" size=3>
+<br>
+<center>
+<font size=4>
+<b>The ChucK Audio Programming Language</b>
+<br>
+<i>A Strongly-timed and On-the-fly Environ/mentality</i>
+</font>
+<br><br>
+
+<a href="http://www.gewang.com/">Ge Wang</a>
+<br><br>
+
+<b>Ph.D. Dissertation</b>
+<br>
+Department of Computer Science
+<br>
+Princeton University, 2008
+<br><br>
+
+<b>Committee</b>
+<br>
+<a href="http://www.cs.princeton.edu/~prc/">Perry R. Cook</a> (advisor),
+<br> <a href="http://music.princeton.edu/~paul/">Paul Lansky</a>, 
+<a href="http://www.cs.cmu.edu/~rbd/">Roger Dannenberg</a> (CMU),
+<br> <a href="http://www.cs.princeton.edu/~appel/">Andrew Appel</a>, 
+<a href="http://www.cs.princeton.edu/~bwk/">Brian Kernighan</a>
+<br><br>
+
+<hr width="150">
+download <a href="thesis.pdf"><b>thesis</b></a> (PDF, 25MB)
+<br>download  <a href="http://www.gewang.com/publish/files/2015-cmj-chuck.pdf">2015 CMJ article</a> (PDF, 600K)
+<br><hr width="150">
+<font size="1"><br></font>
+<table border="0">
+<tr><td>
+<img src="images/chuck-logo.jpg">
+</td><td>
+<img width="84" src="images/upchuck-logo.jpg">
+</td></tr>
+</table>
+<br>
+<a href="http://www.cs.princeton.edu/~prc/HackChuck.html">
+"Everybody Hack ChucK Tonight"</a> by Perry R. Cook
+<br><br>
+
+<table width="800" border="0">
+<tr><td>
+<font face="helvtica" size=3>
+<!--<b>Bibliographical Information</b>-->
+<br>
+Ge Wang.
+<i>The ChucK Audio Programming Language: A Strongly-timed and On-the-fly 
+Environ/mentality</i>.<br>  PhD Thesis, Princeton University, 2008.
+<!--<br>
+<a href="http://www.cs.princeton.edu/~gewang/thesis/">
+http://www.cs.princeton.edu/~gewang/thesis/</a>-->
+<br>
+
+<pre>
+@phdthesis{gewang:thesis,
+	Author = {Ge Wang},
+	School = {Princeton University},
+	Title = {{The ChucK Audio Programming Language: An Strongly-timed and On-the-fly Environ/mentality}},
+	Year = {2008}}
+</pre>
+<br>
+<b>Abstract</b>
+
+<p align="justify">
+
+The computer has long been considered an extremely attractive tool for 
+creating, manipulating, and analyzing sound.  Its precision, possibilities 
+for new timbres, and potential for fantastical automation make it a 
+compelling platform for expression and experimentation - but only to the 
+extent that we are able to express to the computer what to do, and how to 
+do it.  To this end, the programming language has perhaps served as the 
+most general, and yet most precise and intimate interface between humans 
+and computers.   Furthermore, "domain-specific" languages can bring 
+additional expressiveness, conciseness, and perhaps even different ways of 
+thinking to their users.
+
+<br><br>
+
+This thesis argues for the philosophy, design, and development of ChucK 
+(get via <a target="_blank" 
+href="http://chuck.cs.princeton.edu/">@princeton</a> | 
+<a target="_blank" href="http://chuck.stanford.edu/">@stanford</a>), 
+a general-purpose programming language tailored for computer music.  The 
+goal is to create a language that is <i>expressive</i> and <i>easy to 
+write and read</i> with respect to time and parallelism, and to provide a 
+platform for precise audio synthesis/analysis and rapid experimentation in 
+computer music.  In particular, ChucK provides a syntax for representing 
+information flow, a new time-based concurrent programming model that 
+allows programmers to flexibly and precisely control the flow of time in 
+code (we call this "strongly-timed"), and facilities to develop programs 
+<i>on-the-fly</i> - as they run.  A ChucKian approach to <i>live 
+coding</i> as a new musical performance paradigm is also described.  In 
+turn, this motivates the Audicle, a specialized graphical environment 
+designed to facilitate on-the-fly programming, to visualize and monitor 
+ChucK programs in real-time, and to provide a platform for building highly 
+customizable user interfaces.
+
+<br><br>
+
+In addition to presenting the ChucK programming language, a history of 
+music and programming is provided (Chapter 2), and the various aspects of 
+the ChucK language are evaluated in the context of computer music 
+research, performance, and pedagogy (Chapter 6).  As part of an extensive 
+case study, the thesis discusses ChucK as a primary teaching and 
+development tool in the Princeton Laptop Orchestra (PLOrk), which 
+continues to be a powerful platform for deploying ChucK 1) to teach topics 
+ranging from programming to sound synthesis to music composition, and 2) 
+for crafting new instruments, compositions, and performances for 
+computer-mediated ensembles.  Additional applications are also described, 
+including classrooms, live coding arenas, compositions and performances, 
+user studies, and integrations of ChucK into other software systems.
+
+<br><br>
+
+The contributions of this work include the following. 1) A time-based 
+programming mechanism (both language and underlying implementation) for 
+ultra-precise audio synthesis, naturally extensible to real-time audio 
+analysis.  2) A non-preemptive, time/event-based concurrent programming 
+model that provides fundamental flexibility and readability without 
+incurring many of the difficulties of programming concurrency.  3) A 
+ChucKian approach to writing code and designing audio programs on-the-fly.  
+This rapid prototyping mentality has potentially wide ramifications in the 
+way we think about coding audio, in designing/testing software (particular 
+for real-time audio), as well as new paradigms and practices in 
+computer-mediated live performance.  4) The Audicle as a new type of audio 
+programming environment that combines live development with 
+visualizations.  5) Extended case studies of using, teaching, composing, 
+and performing with ChucK, most prominently in the Laptop Orchestra. These 
+show the power of teaching programming via music, and vice versa - and how 
+these two disciplines can reinforce each other.
+</p>
+
+
+<br>
+<hr width="520">
+<center>
+please send comments, questions, suggestions, and complaints to
+<a href="http://www.gewang.com/">Ge Wang</a>.</center>
+</font>
+</td></tr>
+</table>
+
+<br>
+</font>
+</center>
+<br>
+</font>
+
+</body>
+</html>
+

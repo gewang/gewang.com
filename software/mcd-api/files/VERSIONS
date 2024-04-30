@@ -1,0 +1,48 @@
+v1.0.1 (10/4/2015)
+--------
+* released under new BSD license
+* tweaks to comments
+
+v1.0.0 (11/15/2013)
+--------
+public release
+
+--- X-API ---
+x-audio.cpp
+x-audio.h
+x-buffer.cpp
+x-buffer.h
+x-def.h
+x-fun.cpp
+x-fun.h
+x-gfx.h
+x-gfx.mm
+x-loadlum.cpp
+x-loadlum.h
+x-loadrgb.cpp
+x-loadrgb.h
+x-network.h
+x-network.mm
+x-thread.cpp
+x-thread.h
+x-vector3d.cp
+x-vector3d.h
+
+--- Y-API ---
+y-charting.cpp
+y-charting.h
+y-echo.cpp
+y-echo.h
+y-entity.cpp
+y-entity.h
+y-fft.cpp
+y-fft.h
+y-fluidsynth.cpp
+y-fluidsynth.h
+y-particle.cpp
+y-particle.h
+y-score-reader.cpp
+y-score-reader.h
+y-waveform.cpp
+y-waveform.h
+

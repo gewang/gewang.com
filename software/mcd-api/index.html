@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>
+API: Music, Computing, Design</title>
+<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--<link href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" />
+</head>
+<body bgcolor="#ffffff" link="#0000ff" vlink="#0000ff">
+<div id="everything">
+<center>
+<table border="0" width="720">
+<tr><td>
+<font size="2">
+<center>
+<br>
+<font size="5"><b>Music, Computing, Design <font 
+color="#666666">API</font></b></font>
+<br>
+<font size="3"><i>
+A Collection of C++ Classes for Audio + Graphics + Interaction Software 
+Design
+</i></font><br>
+
+<font size="4">
+<b><font color="#666666">
+<a href="http://www.gewang.com/">Ge Wang</a>
+</b></font>
+</font>
+
+<br> <p align="justify"> <font size="2"> The MCD API consists a number of 
+(loosely organized) C++ abstractions and classes I have found useful
+in building computer music software over the last 10+ years, in 
+software systems for: <a target="_blank" 
+href="http://chuck.stanford.edu/">ChucK</a>, <a target="_blank" 
+href="http://soundlab.cs.princeton.edu/software/sndpeek/">sndpeek</a> and
+<a target="_blank" 
+href="http://soundlab.cs.princeton.edu/software/rt_lpc/">rt_lpc</a>,
+audio-visual instruments for <a target="_blank" 
+href="http://slork.stanford.edu/">laptop orchestra</a> and <a 
+target="_blank" href="http://mopho.stanford.edu/">mobile phone 
+orchestra</a>, and adapted 
+to design and create mobile music software like <a target="_blank" 
+href="../../ocarina/">Ocarina</a>; it is also used 
+in teaching audio-visual software design for my courses <a target="_blank" 
+href="http://ccrma.stanford.edu/courses/256a-fall-2014/">Music Software Design</a> 
+(Music 256a / CS 476a at Stanford) and <a target="_blank" 
+href="http://ccrma.stanford.edu/courses/256b-winter-2014">Mobile Music</a> (Music 256b 
+/ CS 476b at Stanford).  It consists of two sets of C++ classes: X-API, 
+lower-level audio/graphics abstractions, and Y-API, higher-level 
+abstractions built on X-API (see below).  <i>Special thanks to Jieun Oh, 
+Spencer Salazar, Nick Bryan, and Jorge Herrera for additional 
+contributions</i>.</p>
+
+<table bgcolor="#d9d9d9" border="0" cellpadding="2" 
+cellspacing="0"><tr><td>
+<table width="100%" bgcolor="#fdfdfd" border="0" cellpadding="4" 
+cellspacing="2"><tr><td>
+<font face="serif" size="4">
+<b>
+ download <a href="files/mcd-api-1.0.1.zip">MCD-API</a> (v1.0.1)
+</b>
+</td></tr></table></table>
+
+
+</center>
+<br><br>
+<center><b>X-API (lower-level abstractions)</b></center>
+<ul>
+<li><a href="../x-api/x-buffer.h">x-buffer</a>: a simple (templated) 
+circular buffer (can be used for audio, messages, objects, etc.)
+<li><a href="../x-api/x-vector3d.h">x-vector3d</a>: 
+a 3D vector implementation (also useful for slewing 
+interpolation)
+<li><a href="../x-api/x-fun.h">x-fun</a>: a few useful utilities functions 
+(e.g., rand2f)
+<li><a href="../x-api/x-thread.h">x-thread</a>: simple thread + mutex 
+abstraction
+<br>(make sure to define your platform, e.g., __PLATFORM_MACOSX__)
+<li><a href="../x-api/x-def.h">x-def</a>: some useful definitions, types, 
+constants
+<li><a href="../x-api/x-audio.h">x-audio</a>: real-time audio wrapper for 
+<a target="_blank" 
+href="http://www.music.mcgill.ca/~gary/rtaudio/">RtAudio</a>
+<li><a href="../x-api/x-gfx.h">x-gfx</a>:a few useful real-time graphics utilities
+<br>(also see <a href="../x-api/x-gfx-osx.h">x-gfx-osx.h</a> with OSX 
+specific texture loading)
+<li><a href="../x-api/x-loadlum.h">x-loadlum</a> and 
+<a href="../x-api/x-loadrgb.h">x-loadrgb</a>: loading 
+luminance data (from .bw files) and color textures (from .rgb files)
+<br>(thanks to David Blythe, SGI)
+<li><a href="../x-api/x-network-osx.h">x-network</a>: (osx only for now) 
+http network code
+</ul>
+
+<br>
+<center><b>Y-API (higher-level abstractions)</b></center>
+<ul>
+<li><a href="../y-api/y-entity.h">y-entity</a>: useful base class 
+for a graphical object, with several usable derived classes
+<li><a href="../y-api/y-particle.h">y-particle</a>: abstractions for 
+starting particle systems
+<li><a href="../y-api/y-waveform.h">y-waveform</a>: entity that draws a 
+waveform (given real-time audio data)
+<li><a href="../y-api/y-charting.h">y-charting</a>: entities for drawing 
+basic histograms and line charts
+<li><a href="../y-api/y-fft.h">y-fft</a>: a lightweight FFT (thanks to 
+CARL distribution)
+<li><a href="../y-api/y-fluidsynth.h">y-fluidsynth</a>: a wrapper for 
+using <a target="_blank" href="http://www.fluidsynth.org/">fluidsynth</a> 
+to render soundfonts
+<li><a href="../y-api/y-score-reader.h">y-score-reader</a>: object to read 
+a MIDI file into a data structure
+<li><a href="../y-api/y-echo.h">y-echo</a>: a simple feedback echo effect
+</ul>
+
+<br>
+<center>
+<hr width="260">
+<font size="2">
+<a href="http://ccrma.stanford.edu/groups/mcd/">MCD</a> |
+<a href="http://ccrma.stanford.edu/">CCRMA</a> | 
+<a href="http://music.stanford.edu/">music</a> |
+<a href="http://www.stanford.edu/">stanford</a>
+</font>
+<br /><br />
+
+</center>
+</font>
+</td></tr>
+</table>
+</center>
+
+</body>
+</html>
+

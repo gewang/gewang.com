@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>sndpeek : real-time audio visualization</title>
+<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--<link href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" /></head>
+<body bgcolor=#ffffff text=#000000>
+<font face=verdana size=2>
+
+<br>
+<center>
+<table border=0 width=640>
+<tr><td>
+<font face=verdana size=2>
+<center>
+<font size=3>
+<b>sndpeek</b> :<br>real-time audio visualization
+</font>
+<br><br>
+
+  <table bgcolor="#d9d9d9" border=0 cellpadding=1 cellspacing=0><tr><td>
+  <table width="100%" bgcolor="#fdfdfd" border=0 cellpadding=1 cellspacing=2>
+  <tr>
+  <td align="right"><font face="verdana" size=2>
+  authors:</td><td><font face=verdana size=2>
+  <a href="http://www.gewang.com/">Ge Wang</a> |
+  <a href="http://www.cs.princeton.edu/~prc/">Perry Cook</a> |
+  <a href="http://www.cs.princeton.edu/~amisra/">Ananya Misra</a>
+  </td></tr>
+  <tr><td align="right"><center><font face="verdana" size=2>
+  </td><td><font face=verdana size=2>
+  <a href="http://www.cs.uvic.ca/~gtzan/">George Tzanetakis</a>
+  (<a href=http://soundlab.cs.princeton.edu/research/marsyas/>MARSYAS</a>)
+  </td></tr>
+  <tr><td align=right>
+  <font face=verdana size=2>
+  date:</td><td><font face=verdana size=2>2003 - present
+  </td></tr>
+  <tr>
+  <td align=right><font face=verdana size=2>
+  version:</td><td><font face=verdana size=2>
+  1.41 (what's <a href="files/VERSIONS">new</a>?)
+  <br>
+  
+  </font></td>
+  </tr>
+  </table></td></tr>
+  </table>
+
+<br>
+<p align=justify>
+<b>sndpeek</b> is just what it sounds (and looks) like:
+</center>
+<ul>
+<li> real-time 3D animated display/playback
+<li> can use mic-input or wav/aiff/snd/raw/mat file (with playback)
+<li> time-domain waveform
+<li> FFT magnitude spectrum
+<li> 3D waterfall plot
+<li> lissajous! (interchannel correlation)
+<li> rotatable and scalable display
+<li> <b>freeze frame</b>! (for didactic purposes)
+<li> real-time spectral feature extraction (centroid, rms, flux, rolloff)
+<li> available on MacOS X, Linux, and Windows under GPL
+<li> part of the <a 
+href="http://sndtools.cs.princeton.edu/">sndtools</a>
+distribution.
+</ul>
+<center>
+</p>
+
+<a href="look.html"><img border=0 src="http://soundlab.cs.princeton.edu/images/sndpeek6.jpg">
+</a>
+<br>
+look -> "<a href="look.html">gallery</a>"
+<br><br>
+<hr width=200>
+Download <b>sndpeek</b>-1.41
+<br>
+<font size=1>(what <a href="files/VERSIONS">new</a>?)</font>
+<hr width=200>
+<br>
+<b>MacOS X</b>: <a href="files/sndpeek-1.41-exe.tgz">executable</a> 
+(mountain lion and later)
+<br><br>
+<b>Win32</b>: <a href="files/sndpeek-1.3-exe.zip">exe + 
+glut32.dll</a> | <a href="files/glut37beta_win32.zip">glut lib</a> (for 
+compilation)
+<br><br>
+<b>All platforms </b>(OS X, Linux, Windows): <a 
+href="files/sndpeek-1.41.tgz">source</a>
+<br>
+(Linux compilation requires <a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a>)
+<br><br>
+<hr width=100>
+<!--
+<br>
+part of the <a 
+href="http://sndtools.cs.princeton.edu/"><b>sndtools</b></a>  
+distribution!<br>
+join the <a 
+href="https://lists.cs.princeton.edu/mailman/listinfo/sndtools">sndtools mailing 
+list</a>-->
+<br>
+<font color="#666666">question? comment? complaint?<br>
+email (gewang /at/ cs.princeton.edu)</font>
+<br><br>
+<hr width=100>
+<br>
+  <table width=450 bgcolor="#d9d9d9" border=0 cellpadding=1 
+cellspacing=0><tr><td>
+  <table width="100%" bgcolor="#fdfdfd" border=0 cellpadding=1 
+cellspacing=2>
+<tr><td><font face=verdana size=3>
+<pre>
+usage: sndpeek  --[options] [filename]
+  ON/OFF options: fullscreen|waveform|lissajous|waterfall|
+                  dB|features|fallcolors|backward|showtime|
+                  freeze
+  number options: timescale|freqscale|lissscale|logfactor|
+                  spacing|zpos|dzpos|depth|preview|yview|
+                  rotatem|rotatek|begintime|ds
+   other options: nodisplay|print
+
+example:
+    sndpeek --fullscreen:ON --features:OFF --spacing:.05
+
+  *** if no file is provided, the mic input is used. ***
+
+----------------------------------------------------
+sndpeek + wutrfall (1.3)
+Ge Wang, Perry R. Cook, Ananya Misra
+http://soundlab.cs.princeton.edu/
+----------------------------------------------------
+'h' - print this help message
+'p' - print current settings to console
+'s' - toggle fullscreen
+'f' - freeze frame! (can still rotate/scale)
+'1' - toggle waveform display
+'2' - toggle lissajous display
+'3' - (also 'w') toggle wutrfall display
+'4' - toggle feature extraction (broken)
+'d' - toggle dB plot for spectrum
+'r' - toggle rainbow waterfall
+'b' - toggle waterfall moving backwards/forwards
+'x' - restart file playback (if applicable)
+'p' - print current settings to terminal
+'m' - mute
+'j' - move spectrum + z
+'k' - move spectrum - z
+'u' - spacing more!
+'i' - spacing less!
+L, R mouse button - rotate left or right
+'[', ']' - rotate up or down
+'-' - scale DOWN the spectrum
+'=' - scale UP the spectrum
+(shift)'-' - scale DOWN the waveform
+(shift)'=' - scale UP the waveform
+'c' = LOWER log factor of spectrum display
+'v' = RAISE log factor of spectrum display
+      (log factor of 1.0 is linear display
+(shift)'c' - LOWER amount of viewable waveform
+(shift)'v' - RAISE amount of viewable waveform
+'l' - scale DOWN the lissajous!
+'L' - scale UP the lissajous!
+'y' - decrease delay for lissajous plot
+'Y' - increase delay for lissajous plot
+'q' - quit
+----------------------------------------------------
+</pre>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+
+</font>
+</td></tr>
+</table>
+
+<br>
+
+<font size=1>
+<hr width=15%>
+<a href="http://soundlab.cs.princeton.edu/">soundlab</a> |
+<a href="http://www.gewang.com/">gewang.com</a>
+<br>
+<br>
+</font>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+letter-spacing:.2pt;
+font-family: 'Lucida Grande', sans-serif;
+}
+
+#everything {
+letter-spacing:.2pt;
+font-family: 'Lucida Grande', sans-serif;
+}
+
+a {
+color: #2229F2;
+outline: none;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: none;
+color: #9999ff;
+}
+
+li {
+letter-spacing:.2pt;
+font-family: 'Lucida Grande', sans-serif;
+}
+
+p {
+letter-spacing:.1pt;
+font-family: 'Lucida Grande', sans-serif;
+}
+
+td {
+letter-spacing:.1pt;
+font-family: 'Lucida Grande', sans-serif;
+}
+
