@@ -1,0 +1,25 @@
+@font-face {
+   font-family: 'Agenda-Bold';
+   font-display: swap;
+   src: url('Agenda-Bold/font.ttf');
+}
+@font-face {
+   font-family: 'Agenda-Medium';
+   font-display: swap;
+   src: url('Agenda-Medium/font.ttf');
+}
+@font-face {
+   font-family: 'Jost-VariableFont_wght';
+   font-display: swap;
+   src: url('Jost-VariableFont_wght/font.ttf');
+}
+@font-face {
+   font-family: 'Agenda-LightItalic';
+   font-display: swap;
+   src: url('Agenda-LightItalic/font.ttf');
+}
+@font-face {
+   font-family: 'Agenda-Light';
+   font-display: swap;
+   src: url('Agenda-Light/font.ttf');
+}
